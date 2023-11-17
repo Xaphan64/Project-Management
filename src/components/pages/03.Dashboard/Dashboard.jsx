@@ -26,10 +26,10 @@ const Dashboard = () => {
   const projects = JSON.parse(localStorage.getItem("projects"));
   const persons = JSON.parse(localStorage.getItem("persons"));
 
-  const projectProgressStatus = projects.filter((project) => project.status === "progress");
-  const projectPendingStatus = projects.filter((project) => project.status === "pending");
-  const projectDoneStatus = projects.filter((project) => project.status === "done");
-  const personAvailableStatus = persons.filter((person) => person.status === "available");
+  const projectProgressStatus = projects?.filter((project) => project.status === "progress") || [];
+  const projectPendingStatus = projects?.filter((project) => project.status === "pending") || [];
+  const projectDoneStatus = projects?.filter((project) => project.status === "done") || [];
+  const personAvailableStatus = persons?.filter((person) => person.status === "available") || [];
 
   // STATE CONSTANTS
 
@@ -40,25 +40,25 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <div className="dashboard-header">
         <div className="grid-1">
-          <DashboardStatusCard number={projectProgressStatus.length} name="projects in progress" color="red">
+          <DashboardStatusCard number={projectProgressStatus?.length || 0} name="projects in progress" color="red">
             <AccountTreeIcon />
           </DashboardStatusCard>
         </div>
 
         <div className="grid-2">
-          <DashboardStatusCard number={projectPendingStatus.length} name="pending projects" color="yellow">
+          <DashboardStatusCard number={projectPendingStatus?.length || 0} name="pending projects" color="yellow">
             <AccountTreeIcon />
           </DashboardStatusCard>
         </div>
 
         <div className="grid-3">
-          <DashboardStatusCard number={projectDoneStatus.length} name="projects done" color="green">
+          <DashboardStatusCard number={projectDoneStatus?.length || 0} name="projects done" color="green">
             <AccountTreeIcon />
           </DashboardStatusCard>
         </div>
 
         <div className="grid-4">
-          <DashboardStatusCard number={personAvailableStatus.length} name="available persons" color="orange">
+          <DashboardStatusCard number={personAvailableStatus?.length || 0} name="available persons" color="orange">
             <GroupIcon />
           </DashboardStatusCard>
         </div>
@@ -67,9 +67,9 @@ const Dashboard = () => {
         <div className="dashboard-body-item">
           <h3>Deadline</h3>
 
-          {projectProgressStatus.length === 0 && <h2 className="dashboard-body-title">No Projects available</h2>}
+          {projectProgressStatus?.length === 0 && <h2 className="dashboard-body-title">No Projects available</h2>}
 
-          {projectProgressStatus.map((project, index) => (
+          {projectProgressStatus?.map((project, index) => (
             <Fragment key={`${index}--${project?.id}`}>
               <DashboardBodyCard title={project.title} description={project.description} footer={project.end}>
                 <AssignmentIcon />
@@ -81,9 +81,9 @@ const Dashboard = () => {
         <div className="dashboard-body-item">
           <h3>Project Start</h3>
 
-          {projectPendingStatus.length === 0 && <h2 className="dashboard-body-title">No Projects available</h2>}
+          {projectPendingStatus?.length === 0 && <h2 className="dashboard-body-title">No Projects available</h2>}
 
-          {projectPendingStatus.map((project, index) => (
+          {projectPendingStatus?.map((project, index) => (
             <Fragment key={`${index}--${project?.id}`}>
               <DashboardBodyCard title={project.title} description={project.description} footer={project.start}>
                 <AssignmentIcon />
@@ -95,9 +95,9 @@ const Dashboard = () => {
         <div className="dashboard-body-item person">
           <h3>Available persons</h3>
 
-          {persons.length === 0 && <h2 className="dashboard-body-title">No persons available</h2>}
+          {personAvailableStatus?.length === 0 && <h2 className="dashboard-body-title">No persons available</h2>}
 
-          {personAvailableStatus.map((person, index) => (
+          {personAvailableStatus?.map((person, index) => (
             <Fragment key={`${index}--${person?.id}`}>
               <DashboardBodyCard title={person.firstName} description={person.lastName} footer={person.position}>
                 <AccountCircleIcon />
