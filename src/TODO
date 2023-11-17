@@ -17,7 +17,7 @@
 17. de pus commenturi la toate functiile - done
 18. de sters comenturile care nu sunt necesare - done
 19. de hotarat daca raman cu sessionStorage sau localStorage (and delete logout timer if sessionStorage)
-20. de rezolvat bug, daca stergi local storage si pornesti aplicatia, iti da eroare dupa ce te loghezi
+20. de rezolvat bug, daca stergi local storage si pornesti aplicatia, iti da eroare dupa ce te loghezi - done
 21. de vazut de ce nu merge sessionStorage dupa ce inchizi tabul
 
 assign:
