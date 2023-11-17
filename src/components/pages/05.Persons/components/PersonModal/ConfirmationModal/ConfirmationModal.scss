@@ -1,0 +1,39 @@
+.person-modal-container {
+  text-align: center;
+
+  &.confirmation {
+    width: 300px;
+  }
+
+  button {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(23, 182, 235);
+    border: 1px solid rgb(23, 182, 235);
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(23, 182, 235);
+      color: white;
+      transition: 0.4s;
+    }
+  }
+
+  .red {
+    color: red;
+    border: 1px solid red;
+
+    &:hover {
+      background-color: red;
+      color: white;
+      transition: 0.4s;
+    }
+  }
+
+  .modal-person-name {
+    font-weight: bold;
+    color: white;
+  }
+}

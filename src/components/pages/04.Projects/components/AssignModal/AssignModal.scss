@@ -1,0 +1,42 @@
+.project-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+
+  .title {
+    color: white;
+  }
+}
+
+.assign-modal-persons-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  .assign-modal-persons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span {
+      color: white;
+    }
+
+    .assign-modal-list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.about-container {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  align-items: center;
+  flex-direction: column;
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: lightblue;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+
+    @media screen and (min-width: 0px) and (max-width: 683px) {
+      font-size: 18px;
+    }
+  }
+}

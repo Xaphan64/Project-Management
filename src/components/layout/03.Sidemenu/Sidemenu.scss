@@ -1,0 +1,82 @@
+.sidemenu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+
+  .sidemenu-buttons,
+  .sidemenu-logout {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    transition: 0.1s;
+    gap: 3px;
+
+    &.close {
+      width: 55px;
+      span {
+        display: none;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding: 20px 0 20px 15px;
+      gap: 15px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border: none;
+      color: lightblue;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(15, 127, 219);
+        transition: 0.4s;
+      }
+
+      &.active {
+        background-color: rgb(15, 127, 219);
+      }
+
+      &.inactive {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+
+  .sidemenu-buttons {
+    .logout-button {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 1280px) {
+    flex-direction: row;
+
+    .sidemenu-buttons {
+      flex-direction: row;
+      width: 100%;
+      gap: 0;
+
+      .logout-button {
+        display: flex;
+      }
+
+      button {
+        flex-direction: column;
+        padding: 0;
+        font-size: 12px;
+        gap: 0;
+        width: 100%;
+      }
+    }
+
+    .sidemenu-logout {
+      display: none;
+    }
+  }
+}

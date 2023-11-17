@@ -1,0 +1,111 @@
+.project-modal-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .project-modal-container {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgb(23, 182, 235);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(23, 182, 235);
+
+    .project-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        color: rgb(23, 182, 235);
+      }
+
+      button {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: rgb(23, 182, 235);
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(23, 182, 235);
+          color: white;
+          transition: 0.4s;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input,
+      textarea {
+        background-color: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-bottom: 1px solid rgb(23, 182, 235);
+        color: white;
+        resize: vertical;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .date-input {
+        display: flex;
+        justify-content: space-around;
+
+        input {
+          border: none;
+        }
+      }
+
+      button {
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: rgb(23, 182, 235);
+        border: 1px solid rgb(23, 182, 235);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(23, 182, 235);
+          color: white;
+          transition: 0.4s;
+        }
+      }
+
+      .project-modal-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: rgb(23, 182, 235);
+
+        select {
+          padding: 5px;
+          background-color: rgba(0, 0, 0, 0.9);
+          color: white;
+          border: 1px solid rgb(23, 182, 235);
+          border-radius: 5px;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

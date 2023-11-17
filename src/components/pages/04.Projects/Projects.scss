@@ -1,0 +1,94 @@
+.projects-container {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+
+    button {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: lightblue;
+      border: 1px solid lightblue;
+      border-radius: 5px;
+      cursor: pointer;
+
+      @media screen and (min-width: 0px) and (max-width: 1280px) {
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
+
+    .projects-tabs {
+      display: flex;
+      gap: 10px;
+
+      .active-tab {
+        background-color: rgba(15, 127, 219, 0.9);
+      }
+    }
+
+    .projects-add-modal {
+      button:hover {
+        background-color: rgba(15, 127, 219, 0.9);
+        transition: 0.4s;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: lightblue;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 0px) and (max-width: 683px) {
+      font-size: 20px;
+    }
+  }
+
+  .project-body {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 10px;
+    padding: 10px 15px;
+    overflow-y: auto;
+
+    @media screen and (min-width: 0px) and (max-width: 1299px) {
+      padding: 0px;
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 683px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 684px) and (max-width: 1081px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1082px) and (max-width: 1575px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1576px) and (max-width: 1901px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1902px) and (max-width: 2227px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 2228px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+}

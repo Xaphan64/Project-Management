@@ -1,0 +1,35 @@
+.person-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: lightblue;
+  width: 250px;
+  cursor: pointer;
+
+  .person-card-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .person-card-first,
+    .person-card-last {
+      word-break: break-all;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow-y: hidden;
+      height: 20px;
+    }
+  }
+
+  .person-card-position {
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+  }
+}

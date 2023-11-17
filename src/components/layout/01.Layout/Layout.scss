@@ -1,0 +1,32 @@
+.layout-container {
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 60px);
+
+    @media screen and (min-width: 0px) and (max-width: 1280px) {
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100% - 50px);
+    }
+
+    .sidemenu {
+      height: 100vh;
+    }
+    .outlet {
+      display: flex;
+      width: 100%;
+
+      @media screen and (min-width: 0px) and (max-width: 1280px) {
+        overflow-y: auto;
+      }
+    }
+  }
+}

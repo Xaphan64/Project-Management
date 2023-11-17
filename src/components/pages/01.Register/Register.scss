@@ -1,0 +1,82 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+
+  .register-header {
+    background-color: rgba(23, 182, 235, 0.9);
+    color: blue;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+    padding: 5px;
+    width: clamp(300px, 15vw, 500px);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    width: clamp(300px, 15vw, 500px);
+    border: 1px solid rgba(23, 182, 235, 0.9);
+
+    button {
+      font-size: 14px;
+      font-weight: bold;
+      color: blue;
+      background-color: rgba(23, 182, 235, 0.9);
+      border-radius: 10px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.9s;
+        background-color: rgb(133, 198, 252);
+      }
+    }
+
+    .register-input {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: rgba(23, 182, 235, 0.9);
+      gap: 10px;
+
+      input {
+        background-color: black;
+        border: 0;
+        color: lightblue;
+        background: transparent;
+        border-bottom: 1px solid rgba(23, 182, 235, 0.9);
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .bottom-error {
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+
+    .error-message {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  }
+}
