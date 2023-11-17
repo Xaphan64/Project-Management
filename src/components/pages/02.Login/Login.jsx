@@ -43,8 +43,6 @@ const Login = () => {
       inputValues.password === localStorage.getItem("Password", inputValues.password)
     ) {
       navigate("/");
-      // localStorage.setItem("token", nanoid());
-
       sessionStorage.setItem("token", nanoid());
     } else {
       setLoginError("Wrong email or password");
