@@ -8,9 +8,9 @@ import { Fragment, useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 
 // MISC
+import { useForm } from "../../hooks/useForm";
 
 // COMPONENTS
-import { useForm } from "../../hooks/useForm";
 import CustomButton from "../../atoms/CustomButton/CustomButton";
 import PersonModal from "./components/PersonModal/PersonModal";
 import PersonCard from "./components/PersonCard/PersonCard";

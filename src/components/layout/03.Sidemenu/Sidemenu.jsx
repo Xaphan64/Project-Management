@@ -15,7 +15,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // COMPONENTS
 import CustomButton from "../../atoms/CustomButton/CustomButton";
-import { useEffect } from "react";
 
 // CONFIGURATION
 const Sidemenu = (props) => {
@@ -31,14 +30,6 @@ const Sidemenu = (props) => {
   // STATE CONSTANTS
 
   // LIFE CYCLE
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      handleLogout();
-    }, 8.64e7);
-
-    return () => clearTimeout(timeoutId);
-    // eslint-disable-next-line
-  }, []);
 
   // EVENT HANDLERS
   const handleLogout = () => {

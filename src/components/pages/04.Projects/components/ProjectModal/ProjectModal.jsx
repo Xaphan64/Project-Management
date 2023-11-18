@@ -7,12 +7,12 @@ import "./ProjectModal.scss";
 import { useEffect, useRef } from "react";
 
 // MISC
+import { getProjectById } from "../../../../hooks/localStorage";
 
 // COMPONENTS
 import CustomInput from "../../../../atoms/CustomInput/CustomInput";
 import CustomTextArea from "../../../../atoms/CustomTextArea/CustomTextArea";
 import CustomButton from "../../../../atoms/CustomButton/CustomButton";
-import { getProjectById } from "../../../../hooks/localStorage";
 import CustomDropdown from "../../../../atoms/CustomDropdown/CustomDropdown";
 
 // CONFIGURATION

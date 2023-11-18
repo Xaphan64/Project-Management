@@ -8,12 +8,12 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./Dashboard.scss";
 
 // LIBRARIES
+import { Fragment } from "react";
 
 // MISC
 
 // COMPONENTS
 import DashboardStatusCard from "./components/DashboardHeaderCard";
-import { Fragment } from "react";
 import DashboardBodyCard from "./components/DashboardBodyCard";
 
 // CONFIGURATION

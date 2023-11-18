@@ -7,12 +7,12 @@ import EditIcon from "@mui/icons-material/Edit";
 import "./ProjectCard.scss";
 
 // LIBRARIES
+import { useState } from "react";
 
 // MISC
 
 // COMPONENTS
 import CustomButton from "../../../../atoms/CustomButton/CustomButton";
-import { useState } from "react";
 import ConfirmationModal from "./ConfirmationModal/ConfirmationModal";
 import AssignModal from "../AssignModal/AssignModal";
 

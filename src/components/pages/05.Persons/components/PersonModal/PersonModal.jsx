@@ -7,12 +7,12 @@ import "./PersonModal.scss";
 import { useEffect, useRef, useState } from "react";
 
 // MISC
+import { getPersonById } from "../../../../hooks/localStorage";
 
 // COMPONENTS
 import CustomInput from "../../../../atoms/CustomInput/CustomInput";
 import CustomButton from "../../../../atoms/CustomButton/CustomButton";
 import CustomDropdown from "../../../../atoms/CustomDropdown/CustomDropdown";
-import { getPersonById } from "../../../../hooks/localStorage";
 import ConfirmationModal from "./ConfirmationModal/ConfirmationModal";
 
 // CONFIGURATION
