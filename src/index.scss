@@ -8,10 +8,10 @@
 }
 
 body {
-  background: url(./components/assets/appBackground.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-image: url(./components/assets/appBackground.jpg);
   background-size: cover;
   background-color: black;
   color: white;
